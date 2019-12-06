@@ -108,6 +108,8 @@ section{
 
 
 footer{
+	position:absolute;
+	bottom:0;
 	background:#373737;
 	height:140px;
 	width:100%;
