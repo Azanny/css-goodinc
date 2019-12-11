@@ -160,7 +160,7 @@ section {
 #mainPic {
   height: 392px;
   position: relative;
-  background: url("assets/bridge.png");
+  background: url("assets/Bridge.png");
   background-position: top left;
 }
 
@@ -319,6 +319,7 @@ section {
 }
 
 .slice {
+	position:relative;
   background: #fff;
   height: 77px;
   margin-bottom: 7px;
@@ -355,6 +356,10 @@ section {
   height: 15px;
   margin-right: 25px;
   margin-bottom: -4px;
+  background: url(assets/whitestar.svg) repeat-x;
+}
+
+.slice:hover .stars {
   background: url(assets/whitestar.svg) repeat-x;
 }
 
@@ -397,18 +402,41 @@ section {
   border-right: 1px solid #dfdfdf;
 }
 
+.slice:hover li:not(:last-child) {
+  border-right: 1px solid #fff;
+}
 .slice li:not(:first-child) {
   padding-left: 25px;
 }
 
-.active {
+.slice:hover {
   background: #f26c4f;
 }
 
-.active h1,
-.active p,
-.active li {
+.slice:hover h1,
+.slice:hover p,
+.slice:hover li {
   color: #fff;
+}
+
+.slice:hover::before{
+	content:'';
+	position:absolute;
+	display:block;
+	background:url('assets/movie.svg') no-repeat;
+	width:32px;
+	height:25px;
+	top:31.5%;
+	left:-50px;
+	
+}
+.slice:first-child:hover::before,
+.slice:nth-child(2):hover::before{
+	top:41%
+}
+
+.slice:nth-child(3):hover::before{
+	top:35%;
 }
 
 #readMore {
